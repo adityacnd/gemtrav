@@ -28,7 +28,7 @@
 <!-- Instalasi -->
 ## Instalasi
 
-1. Pastikan Anda memiliki [persyaratan sistem yang diperlukan] terpenuhi.
+1. Pastikan Anda memiliki [XAMPP, SQL] terpenuhi.
 2. buka XAMPP dulu, masuk ke folder htdocs trs klik kanan(buka terminal)
 3. Clone repositori ini ke komputer lokal Anda.
 
