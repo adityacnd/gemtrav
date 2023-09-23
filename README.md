@@ -40,7 +40,7 @@
 6. trs pilih bagian import 
 8. import filenya ambil dari folder db (nama filenya 'id20834836_gemilang.sql')
 9. don ga bang? :y
-10. belum lah njer
+10. don palalu, belum lah njer
 
 ### setup koneksi
 
