@@ -1,11 +1,7 @@
 <div id="frame-rekap">
-	<!-- <button onclick="takeScreenshot()" class="tombol-action">Rekap Pesanan</button> -->
-	<a class= 'tombol-action' href="<?php echo BASE_URL."index.php?page=my_profile&module=pesanan&action=cetak"; ?>" target="_blank">
-		Rekap Pesanan
+    <a class='tombol-action' href="#" onclick="window.print(); return false;">
+    	Cetak Rekap
 	</a>
-	<!-- <a class='tombol-action' href="#" onclick="window.print(); return false;">
-    	Rekap Pesanan
-	</a> -->
 </div>
 <?php
 
@@ -25,24 +21,23 @@
 					<th class='kiri'>Nomor Pesanan</th>
 					<th class='kiri'>Status</th>
 					<th class='kiri'>Nama</th>
-					<th class='kiri'>Action</th>
+					<th class='kiri'>Tanggal</th>
+					<th class='kiri'>Alamat</th>
+					<th class='kiri'>No. Handphone</th>
 				</tr>";
 		
 		$adminButton = "";
 		while($row=mysqli_fetch_assoc($queryPesanan)){
-			if($level == "superadmin"){
-				$adminButton = "<a class='tombol-action' href='".BASE_URL."index.php?page=my_profile&module=pesanan&action=status&pesanan_id=$row[pesanan_id]'>Update Status</a>";
-			}
 		
 			$status = $row['status'];
 			echo "<tr>
 					<td class='kiri'>$row[pesanan_id]</td>
 					<td class='kiri'>$arrayStatusPesanan[$status]</td>
 					<td class='kiri'>$row[nama]</td>
-					<td class='kiri'>
-						<a class='tombol-action' href='".BASE_URL."index.php?page=my_profile&module=pesanan&action=detail&pesanan_id=$row[pesanan_id]'>Detail Pesanan</a>
-						$adminButton
-					</td>
+					<td class='kiri'>$row[tanggal_pemesanan]</td>
+					<td class='kiri'>$row[alamat]</td>
+					<td class='kiri'>$row[nomor_telepon]</td>
+					
 				 </tr>";
 		}
 		

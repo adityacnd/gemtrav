@@ -1,6 +1,7 @@
 <?php
 
-	define("BASE_URL", "https://gemtravel.000webhostapp.com/");
+	define("BASE_URL", "http://localhost/Gemilang-Web/");
+
 	
 	$arrayStatusPesanan[0] = "Menunggu Pembayaran";
 	$arrayStatusPesanan[1] = "Pembayaran Sedang Di Validasi";

@@ -190,7 +190,10 @@ body{
     margin-bottom: 10px;
     text-align: right;
 }
-
+#frame-rekap {
+    margin-bottom: 10px;
+    text-align: right;
+}
 .tombol-action {
     background: #FEC10D;
     color: white;
