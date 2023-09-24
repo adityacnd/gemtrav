@@ -188,7 +188,8 @@ body{
 
 #frame-tambah {
     margin-bottom: 10px;
-    text-align: right;
+    float: right;
+/*     text-align: right; */
 }
 #frame-rekap {
     margin-bottom: 10px;
