@@ -31,7 +31,7 @@ if($totalBarang == 0){
                 <td class='kiri'>$nama_barang</td>
                 <td class='tengah'>
                     <button class='update-quantity-btn' data-type='minus' data-barang-id='$barang_id'>-</button>
-                    <input type='text' name='$barang_id' value='$quantity' class='update-quantity' />
+                    <input type='text' name='$barang_id' value='$quantity' class='update-quantity' readonly/>
                     <button class='update-quantity-btn' data-type='plus' data-barang-id='$barang_id'>+</button>
                 </td>
                 <td class='kanan'>".rupiah($harga)."</td>

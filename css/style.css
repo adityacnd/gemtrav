@@ -19,7 +19,9 @@ body {
     /*left: 0;*/
     display: none;
 }
-
+#imghder img{
+    width: 91px;
+}
 .close-button {
     float: right;
     margin-right: 19px;
@@ -29,36 +31,52 @@ body {
 #container {
     /* width: 1100px; */
     height: auto;
-    margin: 0px auto;
-    padding: 10px;
+    margin: 0 auto;
+    /* padding: 1px; */
 }
 
 /*#container #header {*/
 /*     margin-top: 20px; */
 /*}*/
-
+#menu {
+    display: flex;
+    /* background-color: pink; */
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;    
+    gap: 5rem;
+    /* justify-content: space-between; */
+}
 #container #header #menu {
     background: #F0B407;
-    padding: 10px 10px;
+    padding: 5px 15px;
     overflow: hidden;
+    top: 0;
+    position: sticky;
 }
-
+.midd{
+    display: flex;
+    gap: 3rem;
+}
 #container #header #menu #user {
     float: left;
     color: white;
+    /* position: sticky; */
 }
 
 #container #header #menu #user a {
     color: white;
     padding-right: 5px;
     margin-top: 5px;
-    display: inline-block;
+    font-size: medium;
+    /* display: inline-block; */
     text-decoration: none;
+    /* gap: 3rem; */
 }
 
 #container #header #menu #button-keranjang {
     float: right;
-    background: orange;
+    background: #4CAF50;
     padding: 2px 10px;
     border-radius: 3px;
     text-decoration: none;
@@ -66,6 +84,7 @@ body {
 
 #container #header #menu #button-keranjang img {
     vertical-align: bottom;
+    width: 27px;
 }
 
 #container #footer {
@@ -75,12 +94,14 @@ body {
 
 #container #footer p {
     color: white;
-    text-align: right;
+    text-align: center;
     font-size: 10px;
     font-style: italic;
     margin: 0px;
 }
-
+/* #footer{
+    padding: 15px 10px;
+} */
 #container #content {
     padding: 10px 0px;
     overflow: hidden;
@@ -142,7 +163,7 @@ body {
 
 #menu-profile {
     float: left;
-    width: 245px;
+    width: 20%;
     /* background: rgb(255, 255, 255); */
     background: #F0B407;
 }
@@ -167,7 +188,7 @@ body {
 
 #profile-content {
     float: left;
-    width: 835px;
+    width: 75%;
     padding: 10px;
     /* justify-content: center; */
     margin-left: 15px;
