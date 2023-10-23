@@ -46,6 +46,7 @@
 			}
 		
 		?>
+		<h1>Login Form</h1>
 		<img src="images/logo.png" alt="logo" id="lg">
 		<div class="element-form">
 			<label>Email</label>
