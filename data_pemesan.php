@@ -21,7 +21,7 @@
 
 			<div class="element-form">
 				<label>Nomor hp(wa)</label>
-				<span><input type="text" name="nomor_telepon" /></span>
+				<span><input type="number" name="nomor_telepon" /></span>
 			</div>		
 			
 			<div class="element-form">
