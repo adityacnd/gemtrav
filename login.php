@@ -5,7 +5,33 @@
 	}
 
 ?>
-
+<style>
+	form{
+		display: flex;
+		/* width: 520px; */
+		/* position: absolute; */
+		flex-direction: column;
+		/* background-color: white; */
+		/* gap: 0.5em; */
+		/* background-color: rgba(255,255,255,0.13); */
+		padding: 41px 21px;
+		border-radius: 11px;
+		backdrop-filter: blur(11px);
+		border: 5px solid rgba(255,255,255,0.1);
+		box-shadow: 0 0 3px rgba(8,7,16,0.6);
+	}
+	form:hover{
+		box-shadow: 0 0 21px rgba(8,7,16,0.6);
+	}
+	#lg{
+		display: flex;
+		width: 70px;
+		height: 70px;
+		object-fit: contain;
+		border-radius: 50%;
+	}
+	
+</style>
 
 <div id="container-user-akses">
 
@@ -20,19 +46,19 @@
 			}
 		
 		?>
-
+		<img src="images/logo.png" alt="logo" id="lg">
 		<div class="element-form">
 			<label>Email</label>
-			<span><input type="text" name="email" /></span>
+			<span><input type="text" name="email" placeholder="example@com"/></span>
 		</div>
 		
 		<div class="element-form">
 			<label>Password</label>
-			<span><input type="password" name="password" /></span>
+			<span><input type="password" name="password" placeholder="password"/></span>
 		</div>	
 
 		<div class="element-form">
-			<span><input type="submit" value="login" /></span>
+			<span><input type="submit" value="login"/></span>
 		</div>	
 	
 	</form>

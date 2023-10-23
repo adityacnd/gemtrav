@@ -513,8 +513,9 @@ h3.label-data-pengiriman {
     align-items: center;
     justify-content: center;
     /*background-color: aliceblue;*/
-    width: 80%;
+    width: 100%;
     height: 100vh;
+    gap: 1rem;
 }
 
 .card{
