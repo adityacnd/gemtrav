@@ -141,7 +141,8 @@ body {
 .element-form span {
     display: block;
 }
-
+.element-form span input[type="email"],
+.element-form span input[type="number"],
 .element-form span input[type="text"],
 .element-form span input[type="password"],
 .element-form span textarea,
@@ -157,7 +158,8 @@ body {
     color: white;
     padding: 7px 20px;
     border-radius: 3px;
-    font-size: 9px;
+    font-size: 11px;
+    width: 100%;
     cursor: pointer;
 }
 

@@ -46,8 +46,10 @@
 			}
 		
 		?>
-		<h1>Login Form</h1>
+		<div class="midlog" style="display: flex; flex-direction: column; align-items: center;">
 		<img src="images/logo.png" alt="logo" id="lg">
+		<h1>Login Form</h1>
+		</div>
 		<div class="element-form">
 			<label>Email</label>
 			<span><input type="email" name="email" placeholder="example@com"/></span>

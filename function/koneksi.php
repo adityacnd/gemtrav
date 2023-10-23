@@ -3,7 +3,6 @@
 	$server = "localhost";
 	$username = "root";
 	$password = "";
-
-	$database = "gemilang";
+	$database = "gtravel";
 	
 	$koneksi = mysqli_connect($server, $username, $password, $database) or die("Koneksi ke database gagal");
