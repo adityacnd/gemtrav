@@ -1,3 +1,24 @@
+<style>
+	form{
+		display: flex;
+		/* width: 100%; */
+		/* width: 520px; */
+		/* position: absolute; */
+		flex-direction: column;
+		/* background-color: white; */
+		/* gap: 0.5em; */
+		/* background-color: rgba(255,255,255,0.13); */
+		padding: 41px 31px;
+		border-radius: 11px;
+		backdrop-filter: blur(11px);
+		border: 5px solid rgba(255,255,255,0.1);
+		box-shadow: 0 0 3px rgba(8,7,16,0.6);
+	}
+	form:hover{
+		box-shadow: 0 0 21px rgba(8,7,16,0.6);
+	}
+	
+</style>
 <div id="container-user-akses">
 
 	<form action="<?php echo BASE_URL."proses_register.php"; ?>" method="POST">
@@ -17,6 +38,7 @@
 				echo "<div class='notif'>Maaf, email yang kamu masukan sudah terdaftar</div>";
 			}
 		?>
+		<h1>Register Form</h1>
 		<div class="element-form">
 			<label>Nama Lengkap</label>
 			<span><input type="text" name="nama_lengkap" value="<?php echo $nama_lengkap; ?>" /></span>
@@ -24,12 +46,12 @@
 
 		<div class="element-form">
 			<label>Email</label>
-			<span><input type="text" name="email" value="<?php echo $email; ?>" /></span>
+			<span><input type="email" name="email" value="<?php echo $email; ?>" /></span>
 		</div>
 
 		<div class="element-form">
 			<label>Nomor Telepon / Handphone</label>
-			<span><input type="text" name="phone" value="<?php echo $phone; ?>" /></span>
+			<span><input type="number" name="phone" value="<?php echo $phone; ?>" /></span>
 		</div>
 
 		<div class="element-form">

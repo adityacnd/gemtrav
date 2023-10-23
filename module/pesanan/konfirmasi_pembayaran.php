@@ -10,7 +10,7 @@
 	
 		<div class="element-form">
 			<label>Nomor Rekening</label>
-			<span><input type="text" name="nomor_rekening" /></span>
+			<span><input type="number" name="nomor_rekening" /></span>
 		</div>	
 
 		<div class="element-form">
@@ -20,7 +20,7 @@
 	
 		<div class="element-form">
 			<label>Tanggal Transfer (format: yyyy-mm-dd)</label>
-			<span><input type="text" name="tanggal_transfer" /></span>
+			<span><input type="date" name="tanggal_transfer" /></span>
 		</div>	
 
 		<div class="element-form">
