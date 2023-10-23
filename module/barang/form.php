@@ -1,6 +1,6 @@
 <?php
 
-	$barang_id = isset($_GET['barang_id']) ? $_GET['barang_id'] : false;
+	$barang_id = isset($_GET['barang_id']) ? $_GET['barang_id'] : "";
 	
 	$nama_barang = "";
 	$kategori_id = "";
@@ -33,7 +33,7 @@
 
 <script src="<?php echo BASE_URL."js/ckeditor/ckeditor.js"; ?>"></script>
 
-<form action="<?php echo BASE_URL."module/barang/action.php?barang_id=$barang_id"; ?>" method="POST" enctype="multipart/form-data">
+<form action="<?php echo BASE_URL."module/barang/action.php?barang_id=$barang_id"; ?>" method="POST" enctype="multipart/form-data"  onsubmit="return validateForm();">
 
 	<div class="element-form">
 		<label>Kategori</label>
@@ -57,7 +57,7 @@
 
 	<div class="element-form">
 		<label>Nama Paket</label>
-		<span><input type="text" name="nama_barang" value="<?php echo $nama_barang; ?>" /></span>
+		<span><input type="text" id="nama_barang" name="nama_barang" value="<?php echo $nama_barang; ?>" /></span>
 	</div>	
 
 	<div style="margin-bottom:10px">
@@ -67,12 +67,14 @@
 	
 	<div class="element-form">
 		<label>Kursi Tersedia</label>
-		<span><input type="text" name="stok" value="<?php echo $stok; ?>" /></span>
+		<span><input type="text" id="stok" name="stok" value="<?php echo $stok; ?>" /></span>
+		
 	</div>	
 
 	<div class="element-form">
 		<label>Harga</label>
 		<span><input type="text" name="harga" value="<?php echo $harga; ?>" /></span>
+		<p id="error-message" style="color: red;"></p>
 	</div>
 
 	<div class="element-form">
@@ -94,8 +96,26 @@
 		<span><input type="submit" name="button" value="<?php echo $button; ?>" /></span>
 	</div>
 
+	<input type="hidden" name="barang_id" value="<?php echo $barang_id; ?>" />
 </form>
 
+
 <script>
-	CKEDITOR.replace("editor");
+    CKEDITOR.replace('editor', {
+        filebrowserBrowseUrl: '<?php echo BASE_URL . "ckfinder/ckfinder.html"; ?>',
+    });
+
+    function validateForm() {
+        var nama_barang = document.getElementById("nama_barang").value;
+        var stok = document.getElementById("stok").value;
+		var spesifikasi = CKEDITOR.instances.editor.getData();
+
+        if (nama_barang.trim() === "" || stok.trim() === "" || spesifikasi.trim() === "") {
+            document.getElementById("error-message").innerText = "Data tidak boleh kosong.";
+            return false; // Formulir tidak akan dikirim
+        }
+
+        // Validasi berhasil, formulir dapat dikirim
+        return true;
+    }
 </script>

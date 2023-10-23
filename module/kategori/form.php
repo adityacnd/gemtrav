@@ -1,6 +1,6 @@
 <?php
 
-	$kategori_id = isset($_GET['kategori_id']) ? $_GET['kategori_id'] : false;
+	$kategori_id = isset($_GET['kategori_id']) ? $_GET['kategori_id'] : "";
 	
 	$kategori = "";
 	$status = "";
@@ -16,13 +16,14 @@
 	}
 
 ?>
-<form action="<?php echo BASE_URL."module/kategori/action.php?kategori_id=$kategori_id"; ?>" method="POST">
+<form action="<?php echo BASE_URL."module/kategori/action.php?kategori_id=$kategori_id"; ?>" method="POST" onsubmit="return validateForm();">
 
 	<div class="element-form">
 		<label>Kategori</label>
-		<span><input type="text" name="kategori" value="<?php echo $kategori; ?>" /></span>
+		<span><input type="text" name="kategori" id="kategori" value="<?php echo $kategori; ?>" /></span>
+		<p id="error-message" style="color: red;"></p>
 	</div>
-
+	
 	<div class="element-form">
 		<label>Status</label>
 		<span>
@@ -36,3 +37,18 @@
 	</div>
 
 </form>
+<script>
+
+    function validateForm() {
+        var kategori = document.getElementById("kategori").value;
+        
+
+        if (kategori.trim() === "" ) {
+            document.getElementById("error-message").innerText = "Data tidak boleh kosong.";
+            return false; // Formulir tidak akan dikirim
+        }
+
+        // Validasi berhasil, formulir dapat dikirim
+        return true;
+    }
+</script>
