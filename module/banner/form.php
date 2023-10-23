@@ -25,16 +25,16 @@
     }   
 ?>
 
-<form action="<?php echo BASE_URL."module/banner/action.php?banner_id=$banner_id"?>" method="post" enctype="multipart/form-data">
+<form action="<?php echo BASE_URL."module/banner/action.php?banner_id=$banner_id"?>" method="post" enctype="multipart/form-data" onsubmit="return validateForm()";>
 	
 	<div class="element-form">
 		<label>Banner</label>	
-		<span><input type="text" name="banner" value="<?php echo $banner; ?>" /></span>
+		<span><input type="text" name="banner" id="banner" value="<?php echo $banner; ?>" /></span>
 	</div>	
 
 	<div class="element-form">
 		<label>Link</label>	
-		<span><input type="text" name="link" value="<?php echo $link; ?>" /></span>
+		<span><input type="text" name="link" id="link" value="<?php echo $link; ?>" /></span>
 	</div>	   
 
 	<div class="element-form">
@@ -46,11 +46,28 @@
 		<label>Status</label>	
 		<span>
 			<input type="radio" value="on" name="status" <?php if($status == "on"){ echo "checked"; } ?> /> On
-			<input type="radio" value="off" name="status" <?php if($status == "off"){ echo "checked"; } ?> /> Off		
+			<input type="radio" value="off" name="status" <?php if($status == "off"){ echo "checked"; } ?> /> Off	
+			<p id="error-message" style="color: red;"></p>	
 		</span>
 	</div>	   
-	   
+	
 	<div class="element-form">
 		<span><input type="submit" name="button" value="<?php echo $button; ?>" class="submit-my-profile" /></span>
 	</div>	
 </form>
+<script>
+
+    function validateForm() {
+        var banner = document.getElementById("banner").value;
+        var link = document.getElementById("link").value;
+        
+
+        if (banner.trim() === "" || link.trim() === "") {
+            document.getElementById("error-message").innerText = "Data tidak boleh kosong.";
+            return false; // Formulir tidak akan dikirim
+        }
+
+        // Validasi berhasil, formulir dapat dikirim
+        return true;
+    }
+</script>
