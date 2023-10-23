@@ -46,12 +46,12 @@
 
 		<div class="element-form">
 			<label>Email</label>
-			<span><input type="text" name="email" value="<?php echo $email; ?>" /></span>
+			<span><input type="email" name="email" value="<?php echo $email; ?>" /></span>
 		</div>
 
 		<div class="element-form">
 			<label>Nomor Telepon / Handphone</label>
-			<span><input type="text" name="phone" value="<?php echo $phone; ?>" /></span>
+			<span><input type="number" name="phone" value="<?php echo $phone; ?>" /></span>
 		</div>
 
 		<div class="element-form">

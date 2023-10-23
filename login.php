@@ -49,7 +49,7 @@
 		<img src="images/logo.png" alt="logo" id="lg">
 		<div class="element-form">
 			<label>Email</label>
-			<span><input type="text" name="email" placeholder="example@com"/></span>
+			<span><input type="email" name="email" placeholder="example@com"/></span>
 		</div>
 		
 		<div class="element-form">
