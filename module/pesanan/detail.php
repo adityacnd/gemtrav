@@ -21,7 +21,7 @@ $backgroundImage = "";
   <hr/>
    <?php	
    if($status == 2){
-      echo '<img src="https://png.pngtree.com/png-vector/20230810/ourmid/pngtree-paid-off-stamp-or-stamp-with-red-color-vector-png-image_9125941.png" style="float: right; width: 150px; opacity: 0.5; margin: 0 31px"/>';
+      echo '<img src="https://png.pngtree.com/png-vector/20230810/ourmid/pngtree-paid-off-stamp-or-stamp-with-red-color-vector-png-image_9125941.png" style="float: right; width: 150px; opacity: 0.3; margin: 0 31px"/>';
    }
 ?>
 
@@ -109,11 +109,11 @@ $backgroundImage = "";
 </table>
 
 <div id="frame-keterangan-pembayaran">
-  <p>Silahkan Lakukan pembayaran ke Bank BCA DIGITAL<br/> Nomor Account : 0000-9999-8888 (A/N Gemilang Travel).<br/> Setelah melakukan pembayaran silahkan lakukan konfirmasi pembayaran <a href="<?php echo BASE_URL."index.php?page=my_profile&module=pesanan&action=konfirmasi_pembayaran&pesanan_id=$pesanan_id"?>">Disini</a>.<br/> </p>
 
   <?php if ($status == 2) { ?>
     <button onclick="printFrameKeteranganPembayaran()" style="background-color: green;color:white; padding: 3px 5px;border:none;display: flex;justify-content:flex-end">Cetak Tiket </button>
   <?php } else { ?>
+    <p>Silahkan Lakukan pembayaran ke Bank BCA DIGITAL<br/> Nomor Account : 0000-9999-8888 (A/N Gemilang Travel).<br/> Setelah melakukan pembayaran silahkan lakukan konfirmasi pembayaran <a href="<?php echo BASE_URL."index.php?page=my_profile&module=pesanan&action=konfirmasi_pembayaran&pesanan_id=$pesanan_id"?>">Disini</a>.<br/> </p>
     <p>Status pesanan belum lunas. Tidak dapat mencetak tiket.</p>
   <?php } ?>
 

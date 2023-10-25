@@ -219,7 +219,7 @@ body {
 }
 
 .table-list tr {
-    border-bottom: 1px solid #1e5474;
+   /* border-bottom: 1px solid #1e5474; */
 }
 
 .table-list tr.baris-title {
@@ -459,7 +459,8 @@ body {
     top: 0px;
     right: 0px;
     text-decoration: none;
-    color: #1e5474;
+    color: red;
+    margin-right: 5px;
 }
 
 .kanan.hapus_item a:hover {
