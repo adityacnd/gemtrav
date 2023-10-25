@@ -21,9 +21,15 @@
 						<img src='".BASE_URL."images/barang/$row[gambar]' />
 					</div>
 					<div id='frame-harga'>
-						<span>".rupiah($row['harga'])."</span>
-						<a href='".BASE_URL."tambah_keranjang.php?barang_id=$row[barang_id]'>+ add to cart</a>
-					</div>
+						<span>".rupiah($row['harga'])."</span>";
+						
+		if($row['stok'] > 0){
+			echo "<a href='".BASE_URL."tambah_keranjang.php?barang_id=$row[barang_id]'>+ Book</a>";
+		} else {
+			echo "<h1>Tidak Tersedia</h1>";
+		}
+		
+		echo "</div>
 					<div id='keterangan'>
 						<b>Keterangan : </b> $row[spesifikasi]
 					</div>

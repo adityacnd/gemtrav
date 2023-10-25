@@ -14,14 +14,17 @@ $kota = $row['kota'];
 $status = $row['status'];
 $backgroundImage = "";
 
-if ($status == "lunas") {
-  $backgroundImage = "background-image: url('https://png.pngtree.com/png-vector/20221029/ourlarge/pngtree-payment-stamp-red-white-png-image_6402644.png');";
-}
 ?>
 
-<div id="frame-faktur" style="<?php echo $backgroundImage; ?>">
+<div id="frame-faktur">
   <h3><center>Detail Pesanan</center></h3>
   <hr/>
+   <?php	
+   if($status == 2){
+      echo '<img src="https://png.pngtree.com/png-vector/20230810/ourmid/pngtree-paid-off-stamp-or-stamp-with-red-color-vector-png-image_9125941.png" style="float: right; width: 150px; opacity: 0.5; margin: 0 31px"/>';
+   }
+?>
+
   <table>
     <tr>
       <td>Nomor pemesanan</td>
@@ -57,7 +60,7 @@ if ($status == "lunas") {
       <td>Status</td>
       <td>:</td>
       <td>
-        <button onclick="takeScreenshot()" style="background-color: orange;border:none"><?php echo $arrayStatusPesanan[$status]; ?></button>
+        <button style="background-color: orange;border:none"><?php echo $arrayStatusPesanan[$status]; ?></button>
       </td>
     </tr>
   </table>
@@ -109,10 +112,32 @@ if ($status == "lunas") {
   <p>Silahkan Lakukan pembayaran ke Bank BCA DIGITAL<br/> Nomor Account : 0000-9999-8888 (A/N Gemilang Travel).<br/> Setelah melakukan pembayaran silahkan lakukan konfirmasi pembayaran <a href="<?php echo BASE_URL."index.php?page=my_profile&module=pesanan&action=konfirmasi_pembayaran&pesanan_id=$pesanan_id"?>">Disini</a>.<br/> </p>
 
   <?php if ($status == 2) { ?>
-    <button onclick="takeScreenshot()" style="background-color: yellow;border:none;display: flex;justify-content:flex-end">cetak tiket</button>
+    <button onclick="printFrameKeteranganPembayaran()" style="background-color: green;color:white; padding: 3px 5px;border:none;display: flex;justify-content:flex-end">Cetak Tiket </button>
   <?php } else { ?>
     <p>Status pesanan belum lunas. Tidak dapat mencetak tiket.</p>
   <?php } ?>
 
   <h5> kendala transaksi? <br/>Hubungi admin(wa) <a href="https://wa.me/6281246575092?text=Halo%20admin%20gemilang%20travel%0Asaya%20terkendala%20pesanan%20saya%0Aatas%20nama%20..%20dengan%20id%20pesananan%20..%0A">Disini</a> </h5>
 </div>
+
+
+<script>
+ function printFrameKeteranganPembayaran() {
+  // Sembunyikan elemen-elemen yang tidak ingin dicetak
+  var elementsToHide = document.querySelectorAll('body > *:not(#profile-content');
+  elementsToHide.forEach(function(element) {
+   element.style.display = '';
+  });
+
+  window.print();
+
+  elementsToHide.forEach(function(element) {
+   element.style.display = '';
+  });
+ }
+</script>
+
+
+
+
+

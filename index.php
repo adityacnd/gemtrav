@@ -218,6 +218,7 @@ $totalBarang = count($keranjang);
 	</div>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.0/html2canvas.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.3/jspdf.umd.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
 	<script src="js/notip.js"></script>
 	<script>
 		// Fungsi untuk menampilkan div
@@ -240,6 +241,7 @@ $totalBarang = count($keranjang);
 			}
 		}
 	</script>
+	
 </body>
 <style>
 	img[alt="www.000webhost.com"] {

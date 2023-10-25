@@ -61,7 +61,7 @@
 		</div>	
 
 		<div class="element-form">
-			<span><input type="submit" value="login"/></span>
+			<span><input type="submit" value="Login"/></span>
 		</div>	
 	
 	</form>

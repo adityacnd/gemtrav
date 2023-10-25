@@ -41,36 +41,36 @@
 		<h1>Register Form</h1>
 		<div class="element-form">
 			<label>Nama Lengkap</label>
-			<span><input type="text" name="nama_lengkap" value="<?php echo $nama_lengkap; ?>" /></span>
+			<span><input type="text" name="nama_lengkap" value="<?php echo $nama_lengkap; ?>" placeholder="ex: shin ryujinn"/></span>
 		</div>
 
 		<div class="element-form">
 			<label>Email</label>
-			<span><input type="email" name="email" value="<?php echo $email; ?>" /></span>
+			<span><input type="email" name="email" value="<?php echo $email; ?>" placeholder="example@g.com"/></span>
 		</div>
 
 		<div class="element-form">
 			<label>Nomor Telepon / Handphone</label>
-			<span><input type="number" name="phone" value="<?php echo $phone; ?>" /></span>
+			<span><input type="number" name="phone" value="<?php echo $phone; ?>" placeholder="081823.."/></span>
 		</div>
 
 		<div class="element-form">
 			<label>Alamat</label>
-			<span><textarea name="alamat"><?php echo $alamat; ?></textarea></span>
+			<span><textarea placeholder="jl. teross" name="alamat"><?php echo $alamat; ?></textarea></span>
 		</div>
 	
 		<div class="element-form">
 			<label>Password</label>
-			<span><input type="password" name="password" /></span>
+			<span><input type="password" name="password" placeholder="password"/></span>
 		</div>	
 
 		<div class="element-form">
 			<label>Re-type Password</label>
-			<span><input type="password" name="re_password" /></span>
+			<span><input type="password" name="re_password" placeholder="password"/></span>
 		</div>	
 
 		<div class="element-form">
-			<span><input type="submit" value="register" /></span>
+			<span><input type="submit" value="Register" /></span>
 		</div>	
 	
 	</form>

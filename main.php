@@ -35,31 +35,48 @@
 			}
 
 			$no = 1;
-			while ($row = mysqli_fetch_assoc($query)) {
+			
+while ($row = mysqli_fetch_assoc($query)) {
+    $style = false;
+    if ($no == 3) {
+        $style = "style='margin-right:0px'";
+        $no = 0;
+    }
 
-				$style = false;
-				if ($no == 3) {
-					$style = "style='margin-right:0px'";
-					$no = 0;
-				}
+    $bookButton = "<div class='button-add-cart'>
+                        <a href='" . BASE_URL . "tambah_keranjang.php?barang_id=$row[barang_id]'>+ Book</a>
+                    </div>";
 
-				echo "<li $style>
-							<p class='price'>" . rupiah($row['harga']) . "</p>
-							<a href='" . BASE_URL . "index.php?page=detail&barang_id=$row[barang_id]'>
-								<img src='" . BASE_URL . "images/barang/$row[gambar]' />
-							</a>
-							<div class='keterangan-gambar'>
-								<p><a href='" . BASE_URL . "index.php?page=detail&barang_id=$row[barang_id]'>$row[nama_barang]</a></p>
-								<span>kursi : $row[stok]</span>
-							</div>
-							<div class='button-add-cart'>
-								<a href='" . BASE_URL . "tambah_keranjang.php?barang_id=$row[barang_id]'>+ Book</a>
-							</div>";
+    if ($row['stok'] == 0) {
+        $bookButton = "";
+        echo "<li $style>
+                <p class='price'>" . rupiah($row['harga']) . "</p>
+                <a href='" . BASE_URL . "index.php?page=detail&barang_id=$row[barang_id]'>
+                    <img src='" . BASE_URL . "images/barang/$row[gambar]' />
+                </a>
+                <div class='keterangan-gambar'>
+                    <p><a href='" . BASE_URL . "index.php?page=detail&barang_id=$row[barang_id]'>$row[nama_barang]</a></p>
+                    <span>kursi : $row[stok]</span>
+                </div>
+                <div class='out-of-stock' style='text-align: center; color: red;'>
+                    <h1>Full Booked</h1>
+                </div>";
+    } else {
+        echo "<li $style>
+                <p class='price'>" . rupiah($row['harga']) . "</p>
+                <a href='" . BASE_URL . "index.php?page=detail&barang_id=$row[barang_id]'>
+                    <img src='" . BASE_URL . "images/barang/$row[gambar]' />
+                </a>
+                <div class='keterangan-gambar'>
+                    <p><a href='" . BASE_URL . "index.php?page=detail&barang_id=$row[barang_id]'>$row[nama_barang]</a></p>
+                    <span>kursi : $row[stok]</span>
+                </div>
+                $bookButton";
+    }
 
-				$no++;
-			}
-
-			?>
+    $no++;
+}
+?>
 		</ul>
 
 	</div>

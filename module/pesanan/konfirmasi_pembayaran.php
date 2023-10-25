@@ -6,19 +6,19 @@
     <form action="<?php echo BASE_URL."module/pesanan/action.php?pesanan_id=$pesanan_id"; ?>" method="POST" onsubmit="return validateForm()">
         <div class="element-form">
             <label>Nomor Rekening</label>
-            <span><input type="text" name="nomor_rekening" id="nomor_rekening" /></span>
+            <span><input type="number" name="nomor_rekening" id="nomor_rekening" placeholder="ex: 1302232121" /></span>
             <span class="error-message" id="error_nomor_rekening"></span>
         </div>
 
         <div class="element-form">
             <label>Nama Account</label>
-            <span><input type="text" name="nama_account" id="nama_account" /></span>
+            <span><input type="text" name="nama_account" id="nama_account" placeholder="Joni - BNI"/></span>
             <span class="error-message" id="error_nama_account"></span>
         </div>
 
         <div class="element-form">
-            <label>Tanggal Transfer (format: yyyy-mm-dd)</label>
-            <span><input type="text" name="tanggal_transfer" id="tanggal_transfer" /></span>
+            <label>Tanggal Transfer (format: mm/dd/yyyy)</label>
+            <span><input type="date" name="tanggal_transfer" id="tanggal_transfer" /></span>
             <span class="error-message" id="error_tanggal_transfer"></span>
         </div>
 

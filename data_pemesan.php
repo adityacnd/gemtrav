@@ -19,17 +19,17 @@ if ($user_id == false) {
 
             <div class="element-form">
                 <label>Nama</label>
-                <span><input type="text" name="nama_penerima" /></span>
+                <span><input type="text" name="nama_penerima" placeholder="ex: ryujinn"/></span>
             </div>
 
             <div class="element-form">
                 <label>Nomor hp(wa)</label>
-                <span><input type="number" name="nomor_telepon" /></span>
+                <span><input type="number" name="nomor_telepon" placeholder="0812111.."/></span>
             </div>
 
             <div class="element-form">
                 <label>Alamat Penjemputan</label>
-                <span><textarea name="alamat"></textarea></span>
+                <span><textarea name="alamat" placeholder="jl. aja dulu"></textarea></span>
             </div>
 
             <div class="element-form">
@@ -48,7 +48,7 @@ if ($user_id == false) {
             </div>
 
             <div class="element-form">
-                <span><input type="submit" value="submit" /></span>
+                <span><input type="submit" value="Submit" /></span>
             </div>
 
         </form>
@@ -61,8 +61,39 @@ if ($user_id == false) {
     <div id="frame-detail-order">
 
         <table class="table-list">
-            <!-- ... (unchanged) ... -->
-        </table>
+			<tr>
+				<th class='kiri'>jenis paket</th>
+				<th class='tengah'>Qty</th>
+				<th class='kanan'>Total</th>
+			</tr>
+			
+			<?php
+				$subtotal = 0;
+				foreach($keranjang AS $key => $value){
+					
+					$barang_id = $key;
+					
+					$nama_barang = $value['nama_barang'];
+					$harga = $value['harga'];
+					$quantity = $value['quantity'];
+					
+					$total = $quantity * $harga;
+					$subtotal = $subtotal + $total;
+					
+					echo "<tr>
+							<td class='kiri'>$nama_barang</td>
+							<td class='tengah'>$quantity</td>
+							<td class='kanan'>".rupiah($total)."</td>
+						</tr>";
+				}
+				echo "<tr>
+						<td colspan='2' class='kanan'><b>Sub Total</b></td>
+						<td class='kanan'><b>".rupiah($subtotal)."</b></td>
+					 </tr>";				
+				
+			?>
+			
+		</table>
 
     </div>
 </div>

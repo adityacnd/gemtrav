@@ -1,5 +1,20 @@
 <div class="container-update" style="flex-direction: column">
       <div class="card">
+        <h2>2023.10.25</h2>
+        <h4>Gemilang Travel Improvement</h4>
+        <ul>
+          <li>Penyesuaian tampilan login,register</li>
+          <li>Memperbaiki Sistem Cetak Tiket</li>
+	  <li>Saat Ini, Kursi berstatus 0 tidak akan bisa di booking</li>
+	  <li>Rekap Pesanan Hanya Untuk Admin</li>
+          <li>
+            Why: Real-world feedback helps Bard improve the quality of its
+            responses. Your feedback on Bard drafts contributes to making Bard
+            better for yourself and others.
+          </li>
+        </ul>
+      </div>
+      <div class="card">
         <h2>2023.10.22</h2>
         <h4>Interface gemtravel improve</h4>
         <ul>
