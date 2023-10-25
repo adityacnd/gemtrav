@@ -33,7 +33,7 @@ if (mysqli_num_rows($queryExplore) == 0) {
                 <td>$rowExplore[kategori]</td>
                 <td class='tengah'>$rowExplore[tgl_publikasi]</td>
                 <td class='tengah'>$rowExplore[status]</td>
-                <td class='tengah2'><textarea rows='3'>$rowExplore[isi]</textarea></td>
+                <td class='tengah2'><textarea rows='3' readonly>$rowExplore[isi]</textarea></td>
                 <td class='tengah'><a class='tombol-action' href='" . BASE_URL . "index.php?page=my_profile&module=explore&action=form&explore_id=$rowExplore[id]" . "'>Edit</a></td>
                 <td class='tengah'><a class='tombol-action' href='" . BASE_URL . "module/explore/action.php?delete_id=$rowExplore[id]" . "'>Delete</a></td>
              </tr>";

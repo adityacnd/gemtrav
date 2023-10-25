@@ -56,7 +56,7 @@ while ($row = mysqli_fetch_assoc($query)) {
                 </a>
                 <div class='keterangan-gambar'>
                     <p><a href='" . BASE_URL . "index.php?page=detail&barang_id=$row[barang_id]'>$row[nama_barang]</a></p>
-                    <span>kursi : $row[stok]</span>
+                    <span style='display: flex; flex-direction: row; align-items: center;justify-content: center;color:red;'><img src='" . BASE_URL . "images/seat4.png' style='width: 21px;' /> $row[stok]</span>
                 </div>
                 <div class='out-of-stock' style='text-align: center; color: red;'>
                     <h1>Full Booked</h1>
@@ -69,7 +69,7 @@ while ($row = mysqli_fetch_assoc($query)) {
                 </a>
                 <div class='keterangan-gambar'>
                     <p><a href='" . BASE_URL . "index.php?page=detail&barang_id=$row[barang_id]'>$row[nama_barang]</a></p>
-                    <span>kursi : $row[stok]</span>
+                    <span style='display: flex; flex-direction: row; align-items: center;justify-content: center;'><img src='" . BASE_URL . "images/seat4.png' style='width: 21px;' /> $row[stok]</span>
                 </div>
                 $bookButton";
     }

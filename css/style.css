@@ -219,7 +219,7 @@ body {
 }
 
 .table-list tr {
-   /* border-bottom: 1px solid #1e5474; */
+    /*border-bottom: 1px solid #1e5474;*/
 }
 
 .table-list tr.baris-title {
@@ -406,6 +406,7 @@ body {
 #detail-barang #frame-gambar img {
     display: block;
     margin: 0px auto;
+    max-width: 401px;
 }
 
 #detail-barang #frame-harga {
